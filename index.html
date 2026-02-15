@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Registration Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <h1>Inventory Registration</h1>
+      <form id="inventoryForm" class="inventory-form">
+        <label for="itemName">Item Name</label>
+        <input id="itemName" name="itemName" type="text" required>
+
+        <label for="sku">SKU</label>
+        <input id="sku" name="sku" type="text" required>
+
+        <label for="category">Category</label>
+        <input id="category" name="category" type="text" required>
+
+        <label for="quantity">Quantity</label>
+        <input id="quantity" name="quantity" type="number" min="0" required>
+
+        <label for="price">Price (USD)</label>
+        <input id="price" name="price" type="number" min="0" step="0.01" required>
+
+        <button type="submit">Save</button>
+      </form>
+      <p id="statusText" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Saved Inventory Items</h2>
+      <select id="inventoryList" size="12" aria-label="Saved inventory list"></select>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
